@@ -1,0 +1,24 @@
+id = "geralttop/battery-history"
+name = "История батареи"
+version = "0.1.0"
+author = "geralttop"
+license = "MIT"
+description = "История заряда по правому клику на штатной батарее"
+icon = "chart-line"
+plugin_api = 42
+tags = ["battery", "history", "panel"]
+dependencies = ["python3", "python-cairo", "busctl"]
+
+[[service]]
+id = "collector"
+entry = "service.luau"
+
+[[panel]]
+id = "history"
+entry = "panel.luau"
+width = 560
+height = "content"
+max_height = 560
+placement = "floating"
+position = "auto"
+open_near_click = true
